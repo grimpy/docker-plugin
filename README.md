@@ -1,4 +1,4 @@
-docker-plugin
+lxc-plugin
 =============
 
-Jenkins Cloud Plugin for Docker
+Jenkins Cloud Plugin for LXC

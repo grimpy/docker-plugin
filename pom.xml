@@ -6,27 +6,22 @@
         <version>1.546</version>
     </parent>
 
-    <groupId>com.nirima</groupId>
-    <artifactId>docker-plugin</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <groupId>com.github.grimpy</groupId>
+    <artifactId>lxc-plugin</artifactId>
+    <version>0.1-SNAPSHOT</version>
     <packaging>hpi</packaging>
-    <name>Docker plugin</name>
+    <name>LXC plugin</name>
 
-    <url>http://wiki.jenkins-ci.org/display/JENKINS/Docker+Plugin</url>
+    <url>http://wiki.jenkins-ci.org/display/JENKINS/LXC+Plugin</url>
  
  <scm>
-    <connection>scm:git:ssh://github.com/jenkinsci/docker-plugin.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/docker-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/docker-plugin</url>
+    <connection>scm:git:ssh://github.com/grimpy/jenkins-lxc-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/grimpy/jenkins-lxc-plugin.git</developerConnection>
+    <url>https://github.com/grimpy/jenkins-lxc-plugin</url>
   </scm>
 
 
     <dependencies>
-        <dependency>
-            <groupId>com.nirima.jdocker</groupId>
-            <artifactId>jDocker</artifactId>
-            <version>0.1-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.jenkins-ci.main</groupId>
             <artifactId>jenkins-core</artifactId>

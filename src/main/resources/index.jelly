@@ -1,4 +1,4 @@
 <div>
   This plugin integrates Jenkins with
-  <a href="http://docker.io/">Docker</a>
+  <a href="http://linuxcontainers.org/">LXC</a>
 </div>
