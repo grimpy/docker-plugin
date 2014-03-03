@@ -200,7 +200,7 @@ public class LXCTemplate implements Describable<LXCTemplate> {
 
         @Override
         public String getDisplayName() {
-            return "Docker Template";
+            return "LXC Template";
         }
 
         public ListBoxModel doFillCredentialsIdItems(@AncestorInPath ItemGroup context) {
@@ -208,6 +208,15 @@ public class LXCTemplate implements Describable<LXCTemplate> {
             return new SSHUserListBoxModel().withMatching(SSHAuthenticator.matcher(Connection.class),
                     CredentialsProvider.lookupCredentials(StandardUsernameCredentials.class, context,
                             ACL.SYSTEM, SSHLauncher.SSH_SCHEME));
+        }
+
+        public ListBoxModel doFillImageItems(@AncestorInPath ItemGroup context) {
+            ListBoxModel templates = new ListBoxModel();
+            LXCClient client = new LXCClient();
+            for (Container con: client.listContainers()){
+                templates.add(con.getName());
+            }
+            return templates;
         }
     }
 }

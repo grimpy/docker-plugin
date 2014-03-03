@@ -2,8 +2,8 @@
     xmlns:c="/lib/credentials" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" >
   <table width="100%">
 
-  <f:entry title="${%ID}" field="image">
-    <f:textbox />
+  <f:entry title="${%Template}" field="image">
+    <c:select />
   </f:entry>
   <f:entry title="${%Labels}" field="labelString">
     <f:textbox />

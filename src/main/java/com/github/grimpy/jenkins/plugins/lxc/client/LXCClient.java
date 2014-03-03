@@ -6,7 +6,12 @@ import java.util.ArrayList;
 public class LXCClient {
     
     public ArrayList<Container> listContainers() {
-        return new ArrayList<Container>();
+        String output = Shell.executeCommand("sudo lxc-ls --stopped");
+        ArrayList<Container> result = new ArrayList<Container>();
+        for (String name: output.split("\\s+")) {
+            result.add(new Container(name));
+        }
+        return result;
     }
     
     public Container getContainer(String name) {
