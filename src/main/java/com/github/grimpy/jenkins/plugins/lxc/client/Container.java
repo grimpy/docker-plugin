@@ -3,7 +3,7 @@ package com.github.grimpy.jenkins.plugins.lxc.client;
 public class Container {
 
     private String name;
-    private String status;
+    private String status = "STOPPED";
     
     public Container(String name) {
         this.name = name;
@@ -48,7 +48,7 @@ public class Container {
     }
     
     public String getIP() {
-        String command = String.format("sudo lxc-ls --fancy -F ipv4 %s", name);
+        String command = String.format("sudo lxc-ls --fancy --fancy-format ipv4 %s", name);
         String output = Shell.executeCommand(command);
         String[] lines = output.split("\n");
         if (lines.length > 0){
